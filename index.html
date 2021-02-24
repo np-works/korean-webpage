@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+  <meta charset = "UTF-8">
+  <title>My First Website</title>
+  <!--Title tab icon-->
+  <link rel = "shortcut icon" 
+        href= "images/rsz_exo-logo.png"
+        type = "image/png">
+  <!--Step1:add this to head for font awesome pictures-->
+  <script src="https://kit.fontawesome.com/23fa105e54.js" 
+          crossorigin="anonymous"></script>
+
+  <!--Adding a CSS style sheet (to head section)-->
+<link href= "css/default.css" type="text/css" />
+<link rel="stylesheet" href="css/my-styling.css" type="text/css" /> 
+
+</head>
+
+
+
+<body onload = "ldFunction()">
+
+  <header>
+    <!-- Fixed Side Bar navigation -->
+    <div id="mainbox" onclick="openFunction()">&#9776;</div> <!-- hamburger sign -->
+        <div id="menu" class="sidemenu">
+        <a href="#about_section">About</a>  <!-- "#"" Associates link with a div in another section -->
+        <a href="#discovering_section">Discovering Kpop</a>
+        <a href="#kmusic_section">Music/Concerts</a>
+        <a href="#kbinge_section">Kdrama Binge</a>
+        <a href="#dancing_section">Kpop Dancing Career</a>
+        <a href="#video_section"> Online Presence </a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeFunction()">&times;</a>     <!-- javascript:void(0) prevents the navigation menu from reloading the page, making the page start at the top, after you click the close button -->
+        </div>
+
+  </header>
+
+  <main > 
+        <div id ="main_content">
+                <section id = "banner_section" class = "page-top">
+            
+                    <img id = "title_img" class="oppa_img" src = "images/cherry_blossoms6.png" alt = "Kpop fangirl watching computer screen">
+
+                    <h1 id = "banner_title" > Me, Myself, & Korean Entertainment </h1>
+
+                </section>
+
+                <section id = "about_section" >
+                    <div id = "about_content_container"> 
+                            <h2 id = "about_title"> About </h2>
+                            <p id = "about_par">Hi, my name is Nancy! I created this site to showcase how my love for 
+                                                korean entertainment has developed over the years, starting from discovering 
+                                                kpop for the first time to how I interact with it today. Hope you enjoy my story:)
+                            </p>
+                    </div>
+
+
+
+
+                    <div class = "image_container">
+                            <img  class = "me_image" src = "images/me_mountains.jpg" alt = "Me sitting on top of a mountain">
+                    </div>          
+                </section>
+            
+
+
+                <section class = "section" id = "discovering_section">
+                    <div id = "dis_kpop_content_container"> 
+                            <h2 id = "dis_kpop_title"> Discovering Kpop  </h2>
+                            <p class ="dis_kpop_par"> In high school, I came across a Youtube video called "Teens React to 
+                                                    EXO - Call Me Baby". The teens had a positive reaction to the song which got me 
+                                                    interested in watching the MV myself. I had never seen a genre of music that 
+                                                    made the choreography an essential part of a song and so <span id = "dots">...</span>
+                                                    <span id = "moreTxt">watching these handsome guys dancing so in sync with each 
+                                                    other was a pretty cool thing to discover. On top of that the music seemed very
+                                                    different than what I was used to with American music. As you can imagine, I started
+                                                    watching and searching for their other songs and fell into a deep hole of obsession. 
+                                                    But it wasnt only their songs that were so attention grabbing, I later found that they 
+                                                    had really fun and diverse personalities while watching their live TV specials. Pretty 
+                                                    soon I became a true fan, waiting for their upcoming new song MVs every few months called
+                                                    "comebacks" and squealing like a schoolgirl whenever my favorite member came on screen. 
+                                                    Don't laugh, I was only 15. Mind you, I had never really cared about any American boy 
+                                                    bands before or ever was a Belieber so me getting all excited about a Korean boy band 
+                                                    was out of my character. I've been a fan of EXO and many other kpop groups ever since.</span> </p>
+                            <button onclick = "rdFunction()" id = "read-more-btn">Read More</button>
+                    </div>
+                </section>
+
+
+
+                <section id = "kmusic_section">
+                    
+                        <div id = "kmusic_content_container">
+                            <h2 id = "music_title"> Music & Concerts </h2>
+                        </div>
+                        <!-- Concert images -->
+                        <div id = "concert_img_container">
+                            <div id = "concert_images">
+                                <img id = "img1" class = "concert_img" class = "image_box2" src="images/exo_concert.JPG" alt="Exo Planet #2 2017" onmouseover = "showProperties(this)" onmouseout = "document.getElementById('caption_box').innerHTML = 'Concerts'">
+                                <img id = "img3" class = "concert_img" class = "image_box2" src="images/bts_wings_tour.jpg" alt=" BTS Wings Tour 2019" onmouseover = "showProperties(this)" onmouseout = "document.getElementById('caption_box').innerHTML = 'Concerts'">
+                                <img id = "img4" class = "concert_img" class = "image_box2" src="images/exoplanet_3.png" alt="EXO Planet #3 2018" onmouseover = "showProperties(this)" onmouseout = "document.getElementById('caption_box').innerHTML = 'Concerts'" >
+                                <img id = "img2" class = "concert_img" class = "image_box2" src="images/concert_friends.JPG" alt=" SuperM Concert 2020" onmouseover = "showProperties(this)" onmouseout = "document.getElementById('caption_box').innerHTML = 'Concerts'">
+                                <div id = "caption_box"> Concerts </div>
+                            </div>
+                        </div>
+
+                        <div id = "kmusic_content1">
+                            <h3 class = "playlist_item"> Concert Memories </h3>
+                            <p> After discovering kpop I have had the priveledge of attending many concerts with my friends. Here are a few songs to give you a taste of what Korean music is out there. I tried to include at least one song for every genre that I really likee. Would recommend looking their music videos and dance practices (if available).   </p>
+                        </div>
+
+                        <!-- Music Playlist -->
+                        <div id = "music_playlist_container" >
+                                <!-- <h3 id = "audio_title" class = "playlist_item"> Favorite Songs </h3> -->
+
+                            <audio src="" controls id="audioPlayer" class = "playlist_item" >
+                                Sorry, your browser doesn't support html5!
+                            </audio>
+                            <ul id="playlist" class = "playlist_item" >
+                                <li class="current-song"><a href="songs/EXO - Call Me Baby.mp3">Call Me Baby (Exo)</a></li>
+                                <li><a href="songs/ZICO - ANY SONG.mp3">Any Song (Zico)</a></li>
+                                <li><a href="songs/TWICE-I-CAN'T-STOP-ME.mp4">I Can't Stop Me (Twice)</a></li>
+                                <li><a href="songs/Addiction-Kim-Jongkook- &-Lee-Suhyun.mp3">Addiction (Kim Jongkook & Lee Suhyun</a></li>
+                                <li><a href="songs/Heize-And-July-Feat.-DEAN,DJFriz.mp4">And July (Heize Feat. Dean & DJ Friz)</a></li>
+                                <li><a href="songs/Heartbeat.mp3">Heartbeat (Strong Woman Drama Ost)</a></li>
+                                <li id = "last_song"><a href="songs/HONG-JINYOUNG-GOOD-BYE.mp4">Good Bye (Hong Jinyoung)</a></li>
+                            </ul>
+                        </div>
+
+                            <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+                        
+                        <div id = "kmusic_content2">
+                            <h3 id = "audio_title" class = "playlist_item"> Favorite Songs </h3>
+                            <p> After discovering kpop I have had the priveledge of attending many concerts with my friends. Here are a few songs to give you a taste of what Korean music is out there. I tried to include at least one song for every genre that I really likee. Would recommend looking their music videos and dance practices (if available).   </p>
+                        </div>
+
+                </section>
+
+
+
+
+
+                <section id = "kbinge_section">
+                        <div id = "kbinge_content_container">
+                            <h2 id = "kbinge_title"> Kdrama Binge </h2>
+                            <p id = "kdrama_par">I got into kdramas after I found out that my favorite kpop singer was an actor. I looked up his previous works and found his drama "It's, Ok That's Love". After that, I was hooked. I included my absolute favorite dramas below (in no particular order) for you to binge watch and enjoy. 
+                            </p>
+                        </div>
+
+
+                        <div id = "six-image-container" >
+                            <div class="image"> <!--main containter around image and overlay-->
+                                <img class="image__img" src="images/scarlet-heart-ryeo.jpg" alt="Scarlet Heart Ryeo"> <!--actual image-->
+                                <div class="image__overlay image__overlay--blur"> <!--overlay container containing title and paragraph - Notice: 2 classes-->
+                                    <div class="image__title">Scarlet Heart Ryeo</div> <!--title div-->
+                                    <p class="image__description">
+                                        Historical drama about a woman who travels back in time and meets different men who care for her in different ways.
+                                    </p>
+                                    <a class= "kdrama-image-link" target="_blank" href="https://dramacool.so/drama-detail/moon-lovers-scarlet-heart-ryeo">Watch Now</a>
+                                </div>
+                            </div>
+                    
+                    
+                            <div class="image"> <!--main containter around image and overlay-->
+                                <img class="image__img" src="images/itsokthatslove_img3.jpg" alt="Scarlet Heart Ryeo"> <!--actual image-->
+                                <div class="image__overlay image__overlay--blur"> <!--overlay container containing title and paragraph - Notice: 2 classes-->
+                                    <div class="image__title">It's Okay That's Love</div> <!--title div-->
+                                    <p class="image__description">
+                                        My first drama ever! A novelist clashes with a psychiatrist on a talk show, but soon they become roommates. 
+                                    </p>
+                                    <a class= "kdrama-image-link" target="_blank" href="https://dramacool.vc/drama-detail/its-okay-its-love">Watch Now</a>
+                                </div>
+                            </div>
+                    
+                            <div class="image"> <!--main containter around image and overlay-->
+                                <img class="image__img" src="images/Coffeeprince.jpg" alt="Scarlet Heart Ryeo"> <!--actual image-->
+                                <div class="image__overlay image__overlay--blur"> <!--overlay container containing title and paragraph - Notice: 2 classes-->
+                                    <div class="image__title">Coffee Prince</div> <!--title div-->
+                                    <p class="image__description">
+                                        My all time favorite drama.  Story of an unlikely romance between a woman, who dresses like a man in order to get work, and a young rich man.
+                                    </p>
+                                    <a class= "kdrama-image-link" target="_blank" href="https://dramacool.so/coffee-prince-episode-1.html">Watch Now</a>
+                                </div>
+                            </div>
+                    
+                    
+                            <div class="image"> <!--main containter around image and overlay-->
+                                <img class="image__img" src="images/Itaewon_img3.jpg" alt="Scarlet Heart Ryeo"> <!--actual image-->
+                                <div class="image__overlay image__overlay--blur"> <!--overlay container containing title and paragraph - Notice: 2 classes-->
+                                    <div class="image__title">Itaewon Class</div> <!--title div-->
+                                    <p class="image__description">
+                                        Inspiring drama. An ex-con and his friends fight to make their ambitious dreams for their street bar a reality.
+                                    </p>
+                                    <a class= "kdrama-image-link" target="_blank" href="https://www.netflix.com/search?q=itae&jbv=81193309">Watch Now</a>
+                                </div>
+                            </div>
+                    
+                    
+                            <div class="image"> <!--main containter around image and overlay-->
+                                <img class="image__img" src="images/strong-woman-do-bong-soon.png" alt="Scarlet Heart Ryeo"> <!--actual image-->
+                                <div class="image__overlay image__overlay--blur"> <!--overlay container containing title and paragraph - Notice: 2 classes-->
+                                    <div class="image__title_2">Strong Woman Do Bong Soon</div> <!--title div-->
+                                    <p class="image__description">
+                                        Really cute drama. A woman born with superhuman strength is hired by the CEO of a gaming company, to be his bodyguard.
+                                    </p>
+                                    <a class= "kdrama-image-link" target="_blank" href="https://projectfreetv.watch/tv/strong-woman-do-bong-soon-season-1/6505/#player">Watch Now</a>
+                                </div>
+                            </div>
+                    
+                            <div class="image"> <!--main containter around image and overlay-->
+                                <img class="image__img" src="images/Jealousy_Incarnate.jpg" alt="Scarlet Heart Ryeo"> <!--actual image-->
+                                <div class="image__overlay image__overlay--blur"> <!--overlay container containing title and paragraph - Notice: 2 classes-->
+                                    <div class="image__title">Jealousy Incarnate</div> <!--title div-->
+                                    <p class="image__description">
+                                        Love triangle drama. A weather girl reunites with her old crush, a grumpy reporter at her TV station. But this time, she has her eyes on his best friend.
+                                    </p>
+                                    <a class= "kdrama-image-link" target="_blank" href="https://dramacool.so/drama-detail/jealousy-incarnate">Watch Now</a>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+
+
+            
+                <!-- Dancing Career Section -->
+
+                <section id = "dancing_section" >
+                    <h2 id = "kpopdancing_title"> My Kpop Dancing Career </h2>
+                    <!-- 1st box -->
+                                <div id = "first-box" class = "no-margin-3-boxes" > <!--all inside info-->
+                                    <div class = "box_content">
+                                        <h3 class = "circle_title">High School</h3>
+                                        <i class="fas fa-home fa-5x"></i>
+                                        <p class = "box-text">I first started to learn how to dance in HS after having watched so many online kpop choreographies that seemed so fun. In secret, when noone was home, I would loudly play kpop music and attempt to mimic the moves that I saw on screen. I didn't progress that much in HS but I had the best time learning how to groove with the music.</p> 
+                                    </div>
+                                </div>  
+
+
+                                    <!-- 2nd box -->
+                                    <div id = "second-box" class = "no-margin-3-boxes">
+                                    <div class = "box_content">
+                                            <h3 class = "circle_title">College</h3>
+                                            <i class="fas fa-university fa-5x"></i>
+                                            <p class = "box-text">In college, I auditioned for a variety of Kpop dance clubs. I was obviously still very new to dance, but I got into a few of them and learned a lot from being on teams. After 3 years of dancing, I was finally able to move in a way that didn't look I was having a seizure. </p> 
+                                            <!-- Opening hyperlink text in a new window (Target) -->
+                                    </div>
+                                    </div>
+
+
+                                <!-- 3rd box -->
+                                <div id = "third-box" class = "no-margin-3-boxes">
+                                    <div class = "box_content">
+                                        <h3 class = "circle_title">Post Grad</h3>
+                                        <i class="fas fa-briefcase fa-5x"></i>
+                                        <p class = "box-text">As a post-graduate, I still dance from time to time and continue to help out my dance team as a dance assistant. I teach simple choreography and give feedback to my team members, hoping to help the newbies build confidence in dancing  newbies and show them how fund Kpop dancing can be.</p> 
+                                    </div>
+                                </div>
+                </section>
+
+                <section id = "video_section">
+                <h2 id = "vid_title">Online Presence</h2>
+                <div id = "video_content_container">
+                        <p id = "vid_par">Today I mostly connect with korean entertainment by continuing to dance with my dance team whenever possible and making live/virtual dance covers every so often. Check out my present and past dance teams' YouTube channels below!</p>
+                        <div id = "btn_container">
+                            <a class = "btn" target="_blank" href="https://www.youtube.com/channel/UCRX8jdjkXTrJ1LTXUm14nwA">KBM Dance</a>
+                            <a class = "btn" target="_blank" href="https://www.youtube.com/channel/UCE6g685IncRt58mAjX8NXMA">Seoula</a>
+                        </div>
+                </div>
+                    <!-- Scroll to Top Button-->
+                    <a id = "page-top" href="#main_content">
+                        <i class="fas fa-angle-up"></i>
+                    </a>
+                </section>
+            
+
+                <script type = "text/javascript" src = "js/interactivity.js" ></script> <!-- Javascript needs to appear after the html DOM elements or else your code wont work -->
+        </div>
+    </main> 
+
+</body>
+</html>
