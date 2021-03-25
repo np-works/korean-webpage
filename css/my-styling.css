@@ -197,6 +197,8 @@ p {
   position: relative;
   padding-top: 3rem;
   padding-bottom: 3rem;
+  transition: all 0.3s ease 0s;
+
  }
 
  #dis_kpop_content_container{
@@ -222,7 +224,9 @@ p {
   font-size: 20px;
   margin: 0px;
   padding: 1rem 30px;
+  max-height:900px;
   transition: all 0.3s ease 0s;
+
  }
 
  .more{
@@ -252,6 +256,8 @@ p {
   background-color: pink;  
 
 }
+
+
 
 
  /* Music/Concerts section  */
@@ -628,7 +634,7 @@ a:hover{
   transition: transform 0.25s; /* Text comes up from the bottom when you hover: text is going to be pushed back up slowly when you hoveer away */
 }
 
-.image__overlay:hover, .image__overlay:active{ /* styling when you hover image */
+.image__overlay:hover{ /* styling when you hover image */
   opacity: 0.85;
 }
 
