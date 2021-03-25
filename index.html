@@ -15,6 +15,7 @@
   <!--Adding a CSS style sheet (to head section)-->
 <link href= "css/default.css" type="text/css" />
 <link rel="stylesheet" href="css/my-styling.css" type="text/css" /> 
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
 </head>
 
@@ -24,8 +25,11 @@
 
   <header>
     <!-- Fixed Side Bar navigation -->
-    <div id="mainbox" onclick="openFunction()">&#9776;</div> <!-- hamburger sign -->
+    <!-- <div id="mainbox_container" onclick="openFunction()">  -->
+        <div id="mainbox" onclick="openFunction()">&#9776;</div> <!-- hamburger sign -->
+    <!-- </div> -->
         <div id="menu" class="sidemenu">
+        <a href="#main_content">Home</a>
         <a href="#about_section">About</a>  <!-- "#"" Associates link with a div in another section -->
         <a href="#discovering_section">Discovering Kpop</a>
         <a href="#kmusic_section">Music/Concerts</a>
@@ -41,7 +45,7 @@
         <div id ="main_content">
                 <section id = "banner_section" class = "page-top">
             
-                    <img id = "title_img" class="oppa_img" src = "images/cherry_blossoms6.png" alt = "Kpop fangirl watching computer screen">
+                    <img id = "title_img" class="oppa_img" src = "images/korean banner.jpg" alt = "Kpop fangirl watching computer screen">
 
                     <h1 id = "banner_title" > Me, Myself, & Korean Entertainment </h1>
 
@@ -51,7 +55,7 @@
                     <div id = "about_content_container"> 
                             <h2 id = "about_title"> About </h2>
                             <p id = "about_par">Hi, my name is Nancy! I created this site to showcase how my love for 
-                                                korean entertainment has developed over the years, starting from discovering 
+                                                Korean entertainment has developed over the years, starting from discovering 
                                                 kpop for the first time to how I interact with it today. Hope you enjoy my story:)
                             </p>
                     </div>
@@ -69,8 +73,7 @@
                 <section class = "section" id = "discovering_section">
                     <div id = "dis_kpop_content_container"> 
                             <h2 id = "dis_kpop_title"> Discovering Kpop  </h2>
-                            <p class ="dis_kpop_par"> In high school, I came across a Youtube video called "Teens React to 
-                                                    EXO - Call Me Baby". The teens had a positive reaction to the song which got me 
+                            <p class ="dis_kpop_par"> In high school, I came across a Youtube video called <i>Teens React To Exo - Call Me Baby (K-pop)</i>. The teens had a positive reaction to the song which got me 
                                                     interested in watching the MV myself. I had never seen a genre of music that 
                                                     made the choreography an essential part of a song and so <span id = "dots">...</span>
                                                     <span id = "moreTxt">watching these handsome guys dancing so in sync with each 
@@ -99,22 +102,73 @@
                         <div id = "concert_img_container">
                             <div id = "concert_images">
                                 <img id = "img1" class = "concert_img" class = "image_box2" src="images/exo_concert.JPG" alt="Exo Planet #2 2017" onmouseover = "showProperties(this)" onmouseout = "document.getElementById('caption_box').innerHTML = 'Concerts'">
-                                <img id = "img3" class = "concert_img" class = "image_box2" src="images/bts_wings_tour.jpg" alt=" BTS Wings Tour 2019" onmouseover = "showProperties(this)" onmouseout = "document.getElementById('caption_box').innerHTML = 'Concerts'">
-                                <img id = "img4" class = "concert_img" class = "image_box2" src="images/exoplanet_3.png" alt="EXO Planet #3 2018" onmouseover = "showProperties(this)" onmouseout = "document.getElementById('caption_box').innerHTML = 'Concerts'" >
+                                <img id = "img3" class = "concert_img" class = "image_box2" src="images/bts_wings_tour.jpg" alt="BTS Wings Tour 2019" onmouseover = "showProperties(this)" onmouseout = "document.getElementById('caption_box').innerHTML = 'Concerts'">
+                                <img id = "img4" class = "concert_img" class = "image_box2" src="images/exoplanet_3.png" alt="Exo Planet #3 2018" onmouseover = "showProperties(this)" onmouseout = "document.getElementById('caption_box').innerHTML = 'Concerts'" >
                                 <img id = "img2" class = "concert_img" class = "image_box2" src="images/concert_friends.JPG" alt=" SuperM Concert 2020" onmouseover = "showProperties(this)" onmouseout = "document.getElementById('caption_box').innerHTML = 'Concerts'">
                                 <div id = "caption_box"> Concerts </div>
                             </div>
                         </div>
 
                         <div id = "kmusic_content1">
-                            <h3 class = "playlist_item"> Concert Memories </h3>
-                            <p> After discovering kpop I have had the priveledge of attending many concerts with my friends. Here are a few songs to give you a taste of what Korean music is out there. I tried to include at least one song for every genre that I really likee. Would recommend looking their music videos and dance practices (if available).   </p>
+                            <h3 id = "con_mem_title"> Concert Memories </h3>
+                            <p> After discovering kpop, I have had the priviledge of attending many concerts with my friends. Even my friends who weren't super fans found them exciting and unique. Although it was hard to get tickets sometimes, we still managed to attend our favorites even if they were back seat tickets. My favorite will always be my first Exo concert that I attended when I was in high school in 2017.    </p>
                         </div>
 
                         <!-- Music Playlist -->
-                        <div id = "music_playlist_container" >
-                                <!-- <h3 id = "audio_title" class = "playlist_item"> Favorite Songs </h3> -->
-
+                        <div id = "audio_container">
+                            <audio id="myAudio" ontimeupdate="onTimeUpdate()">
+                                <!-- <source src="audio.ogg" type="audio/ogg"> -->
+                                <source id="source-audio" src="" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                            
+                            <div class="player-ctn">
+                                <div class="infos-ctn">
+                                <div class="timer">00:00</div>
+                                <div class="title"></div>
+                                <div class="duration">00:00</div>
+                                </div>
+                                <div id="myProgress">
+                                <div id="myBar"></div>
+                                </div>
+                                <div class="btn-ctn">
+                                <div class="btn-action first-btn" onclick="previous()">
+                                    <div id="btn-faws-back">
+                                        <i class='fas fa-step-backward'></i>
+                                    </div>
+                                </div>
+                                <div class="btn-action" onclick="rewind()">
+                                    <div id="btn-faws-rewind">
+                                        <i class='fas fa-backward'></i>
+                                    </div>
+                                </div>
+                                <div class="btn-action" onclick="toggleAudio()">
+                                    <div id="btn-faws-play-pause">
+                                        <i class='fas fa-play' id="icon-play"></i>
+                                        <i class='fas fa-pause' id="icon-pause" style="display: none"></i>
+                                    </div>
+                                </div>
+                                <div class="btn-play" onclick="forward()">
+                                    <div id="btn-faws-forward">
+                                        <i class='fas fa-forward'></i>
+                                    </div>
+                                </div>
+                                <div class="btn-action" onclick="next()">
+                                    <div id="btn-faws-next">
+                                        <i class='fas fa-step-forward'></i>
+                                    </div>
+                                </div>
+                                <div class="btn-mute" id="toggleMute" onclick="toggleMute()">
+                                    <div id="btn-faws-volume">
+                                        <i id="icon-vol-up" class='fas fa-volume-up'></i>
+                                        <i id="icon-vol-mute" class='fas fa-volume-mute' style="display: none"></i>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="playlist-ctn"></div>
+                            </div>
+                        </div>
+                        <!-- <div id = "music_playlist_container" >
                             <audio muted src="" controls id="audioPlayer" class = "playlist_item" >
                                 Sorry, your browser doesn't support html5!
                             </audio>
@@ -130,10 +184,10 @@
                         </div>
 
                             <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
-                        
+                         -->
                         <div id = "kmusic_content2">
                             <h3 id = "audio_title" class = "playlist_item"> Favorite Songs </h3>
-                            <p> After discovering kpop I have had the priveledge of attending many concerts with my friends. Here are a few songs to give you a taste of what Korean music is out there. I tried to include at least one song for every genre that I really likee. Would recommend looking their music videos and dance practices (if available).   </p>
+                            <p> Here I added a playlist to give you a taste of what kind of Korean music is out there. They are not all kpop. I tried to include at least one song for every genre that I really like. Would recommend looking their music videos and dance practices (if available).   </p>
                         </div>
 
                 </section>
@@ -145,7 +199,7 @@
                 <section id = "kbinge_section">
                         <div id = "kbinge_content_container">
                             <h2 id = "kbinge_title"> Kdrama Binge </h2>
-                            <p id = "kdrama_par">I got into kdramas after I found out that my favorite kpop singer was an actor. I looked up his previous works and found his drama "It's, Ok That's Love". After that, I was hooked. I included my absolute favorite dramas below (in no particular order) for you to binge watch and enjoy. 
+                            <p id = "kdrama_par">I got into kdramas after I found out that my favorite kpop singer was an actor. I looked up his previous works and found his drama <i>It's, Ok That's Love</i>. After that, I was hooked. I included my absolute favorite dramas below (in no particular order) for you to binge watch and enjoy. 
                             </p>
                         </div>
 
@@ -231,7 +285,7 @@
                     <!-- 1st box -->
                                 <div id = "first-box" class = "no-margin-3-boxes" > <!--all inside info-->
                                     <div class = "box_content">
-                                        <h3 class = "circle_title">High School</h3>
+                                        <h3 class = "circle_title">HS and Home</h3>
                                         <i class="fas fa-home fa-5x"></i>
                                         <p class = "box-text">I first started to learn how to dance in HS after having watched so many online kpop choreographies that seemed so fun. In secret, when noone was home, I would loudly play kpop music and attempt to mimic the moves that I saw on screen. I didn't progress that much in HS but I had the best time learning how to groove with the music.</p> 
                                     </div>
@@ -262,7 +316,7 @@
                 <section id = "video_section">
                 <h2 id = "vid_title">Online Presence</h2>
                 <div id = "video_content_container">
-                        <p id = "vid_par">Today I mostly connect with korean entertainment by continuing to dance with my dance team whenever possible and making live/virtual dance covers every so often. Check out my present and past dance teams' YouTube channels below!</p>
+                        <p id = "vid_par">Today I mostly connect with Korean entertainment by continuing to dance with my dance team whenever possible and making live/virtual dance covers every so often. Check out my present and past dance teams' YouTube channels below!</p>
                         <div id = "btn_container">
                             <a class = "btn" target="_blank" href="https://www.youtube.com/channel/UCRX8jdjkXTrJ1LTXUm14nwA">KBM Dance</a>
                             <a class = "btn" target="_blank" href="https://www.youtube.com/channel/UCE6g685IncRt58mAjX8NXMA">Seoula</a>

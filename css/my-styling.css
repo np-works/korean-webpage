@@ -42,19 +42,24 @@ p {
 }
 
 
-
 #mainbox{
-  font-size: 30px;
+  font-size: 20px;
   cursor: pointer;
-  transition: all .6s;
+  transition: all .3s;
   position: fixed;
   top: 25px;
-  left: 30px;
+  left: 20px;
   z-index: 1;
-  color: #8a8787; 
+  color: white;
+  padding: .75rem 1rem;
+  background-color: rgba(75, 73, 73, 0.467);
+  border-radius: .5em;
+  border: 2px solid white;
  }
+
  #mainbox:hover{
- transform:scale(1.2);
+  background-color: #373737;
+  color:white;
 }
 
  .sidemenu{
@@ -63,7 +68,7 @@ p {
   left: 0px;
   height: 100%;
   width: 0px;
-  background-color: #ffe4e9;
+  background-color: #373737;
   z-index: 1; /*The z-index property specifies the stack order of an element. An element with greater stack order is always in front of an element with a lower stack order. Note: z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky). */
   padding-top: 100px;
   overflow-x: hidden;
@@ -73,21 +78,31 @@ p {
   padding: 8px 8px 8px 64px;
   text-decoration: none;
   font-size: 20px;
-  color: #8a8787;
+  color: white;
   display: block;
   font-family: Raleway,sans-serif;
   font-weight: 300;
+  transition: all .1s;
  }
  .sidemenu a:hover{
-   color: white;
+  color: pink;
  }
  .sidemenu .closebtn{
   position: absolute;
-  top: 0px;
-  right: 25px;
-  font-size: 36px;
+  top: 25px;
+  right: 10px;
+  font-size: 25px;
   margin-left: 32px;
+  color: white;
+  padding: .67rem 1.1rem;
+  background-color: rgba(75, 73, 73, 0.467);
+  border-radius: 0.5em;
+  transition: all 0.3s ease 0s;
  }
+ .sidemenu .closebtn:hover{
+  background-color: #373737;
+ }
+
 
 
 /* Title section */
@@ -104,26 +119,24 @@ p {
   /* grid-area: title_img; */
   /* position: relative; */
   display: block;
+  width:100%;
 }
 
 
 #banner_title {
-  font-size: 250%;
-  color: #f4a2b1;
+  font-size: 4rem;
+  color: #5d5d5d;
   font-family: Raleway,sans-serif;
-  font-weight: 345;
+  font-weight: 300;
   text-align: center;
-  line-height: 1.5em;
-  background: white;
-  border: solid pink;
-  padding: .5em;
-  height: fit-content;
+  line-height: 1em;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate( -50%, -50% );
   text-align: center;
-
+  text-shadow: 1.5px 1.5px #5d5d5d57;
+  width: 40rem;
   } 
 
 
@@ -131,17 +144,18 @@ p {
 
 
  #about_section{
-  background-color: #f5b8c3;
+  background-color: rgb(253, 234, 234);
   width: 100%;
   height: 100%;
   position: relative;
   display:grid;
   grid-gap: 30px;
   grid-template-columns: repeat(2, 1fr);
+  color:#8a8787;
+  padding: 3rem 0rem;
 }
   .image_container{
     text-align: center;
-    padding: 3rem;
 	}
 	
   
@@ -159,20 +173,17 @@ p {
 
 
 #about_content_container{
-  text-align: center;
-  padding:3rem;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
 }
-
-#about_par{
-  color: white;
-  font-size: 1.5em;
-
-}
-
 #about_title{
-    color: white;
-    font-size: 4em;
-    margin:0px;
+  font-size: 50px;
+  margin:0px;
+}
+#about_par{
+  font-size: 20px;
+
 }
  
 
@@ -185,20 +196,24 @@ p {
   background-blend-mode: lighten;
   background-color: rgba(255,255,255,0.6);
   position: relative;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
  }
 
  #dis_kpop_content_container{
   width: 80%;
-  padding-bottom: 35px;
   margin: 0 auto;
   background-color: white;
   text-align:center;
+  transition: all 0.3s ease 0s;
+
  }
 
  #dis_kpop_title{
   color: #8a8787;
-  margin:0;
-  padding: .5em 0 .5em 0;
+  padding: 2rem 0rem 0rem 0rem;
+  margin: 0;
+  font-size: 50px;
  }
 
 
@@ -206,29 +221,21 @@ p {
  .dis_kpop_par{
   color: #8a8787;
   font-size: 20px;
-  padding-left: 30px;
   margin: 0px;
-  padding-right: 30px;
+  padding: 1rem 30px;
+  transition: all 0.3s ease 0s;
  }
 
  .more{
    display:none;
  }
 
- /* #read-more-btn{
-    padding: 15px 60px;
-    background-color: pink;
-    color: #f56196dd;
-    border: none;
-    outline: none;
-    font-size: ;
-    cursor: pointer;
- }  */
+
  #read-more-btn{
  display: inline-block;
  padding: 1em 1.5em;
  border: 0.1em solid #8a8787;
- margin: 2em 0.3em 0.3em 0;
+ margin: 2em 0em 2em 0;
  border-radius: 0.12em;
  box-sizing: border-box;
  text-decoration: none;
@@ -236,16 +243,14 @@ p {
  font-weight: 400;
  color: #8a8787;
  text-align: center;
- transition: all 0.2s;
+ transition: all 0.3s ease 0s;
  cursor: pointer;
  background-color: #fee4e9;
  }
 
 
  #read-more-btn:hover {
-  color:white;
-  background-color: lightgrey;  
-  border: 0.1em solid white;
+  background-color: pink;  
 
 }
 
@@ -256,6 +261,7 @@ p {
   width:100%;
   height:100%; 
   background-color:rgb(216 222 217);
+  padding-top: 3rem;
   position: relative;
   display:grid;
   grid-gap: 30px;
@@ -269,7 +275,9 @@ p {
  #music_title{
    color:#8a8787;
    margin:0;
-   padding: .5em 0 .5em 0;
+ }
+ #con_mem_title{
+   margin:0;
  }
 
  #kmusic_content1{
@@ -357,16 +365,136 @@ p {
   padding-bottom:20px;
 }
 
-.playlist_item{
-  margin-top:0;
-}
+
 
 /* Music Playlist Styling*/
 
-#audio_title{
-color:#8a8787;
+#audio_container{
+  /* background-color: gray; */
+  color: pink;
+  font-family: 'Roboto', sans-serif;
+  padding-bottom:30px;
 }
 
+#myProgress {
+  width: 420px;
+   background-color: #d9d9f2; 
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#myBar {
+  width: 0%;
+  height: 5px;
+  background-color: #ffc266;
+  border-radius: 10px;
+}
+
+.logo {
+  fill: red;
+}
+
+.btn-action{
+  cursor: pointer;
+  padding-top: 10px;
+  width: 30px;
+}
+
+.btn-ctn, .infos-ctn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.infos-ctn{
+padding-top: 20px;
+}
+
+.btn-ctn > div {
+ padding: 5px;
+ margin-top: 18px;
+ margin-bottom: 18px;
+}
+
+.infos-ctn > div {
+ margin-bottom: 8px;
+ color: pink;
+}
+
+.first-btn{
+  margin-left: 3px;
+}
+
+.duration{
+  margin-left: 10px;
+}
+
+.title{
+  margin-left: 10px;
+  width: 210px;
+  text-align: center;
+}
+
+.player-ctn{
+  border-radius: 15px;
+  width: 420px;
+  padding: 10px;
+  background-color: #373737;
+  margin:auto;
+  /* margin-top: 100px; */
+}
+
+.playlist-track-ctn{
+  display: flex;
+  background-color: #464646;
+  margin-top: 3px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.playlist-track-ctn > div{
+  margin:10px;
+}
+.playlist-info-track{
+  width: 80%;
+}
+.playlist-info-track,.playlist-duration{
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: white;
+  font-size: 14px;
+  pointer-events: none;
+}
+.playlist-ctn{
+   padding-bottom: 20px;
+}
+.active-track{
+  background: #4d4d4d;
+  color: pink !important;
+  font-weight: bold;
+  
+}
+
+.active-track > .playlist-info-track,.active-track >.playlist-duration,.active-track > .playlist-btn-play{
+  color: pink !important;
+}
+
+
+.playlist-btn-play{
+  pointer-events: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+/* .fas{
+  color: #ffc266;
+  font-size: 20px;
+} */
+
+
+#audio_title{
+  margin:0;
+}
+/*
 audio{
 display:inline-block;
 margin-bottom:12px;
@@ -414,7 +542,7 @@ a:hover{
 
 #last_song{
   border-bottom:none;
-}
+} */
 
 
 
@@ -426,14 +554,14 @@ a:hover{
 #kbinge_section{
   width: 100%;
   height: 100%;
-  background-color: #f7d2d8;
+  background-color: rgb(253, 234, 234);
   text-align: center;
   position: relative;
+  padding-top:3rem;
 }
 
 #kbinge_title{
   margin:0;
-  padding: .5em 0 .5em 0;  
 }
 
 
@@ -511,7 +639,12 @@ a:hover{
 
 .image__title { /* only styling for the title */
   font-size: 1.5em;
-  font-weight: bold;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.image__title_2 { /* different font size for the title of strong woman drama */
+  font-size: 1.4em;
+  font-weight: 500;
   margin-bottom: 10px;
 }
 
@@ -532,12 +665,6 @@ a:hover{
 
 
 
-.image__title_2 { /* different font size for the title of strong woman drama */
-  font-size: 1.2em;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
 
 
 
@@ -548,6 +675,7 @@ a:hover{
     background-position: center;
     background-blend-mode: lighten;
     background-color: rgba(255,255,255,0.6);
+    padding-top:3rem;
     position: relative;
     display: grid;
     grid-gap: 30px;
@@ -566,7 +694,6 @@ a:hover{
    text-align:center;
    grid-area:kpopdancing_title;
    margin:0;
-   padding: .5em 0 .5em 0;
  }
   /* No margin side by side boxes */
 
@@ -585,14 +712,14 @@ padding-bottom:45px;
 }
 
 .no-margin-3-boxes{
-  color: white;
-  border-radius: .5em;
-  background-color: rgb(138 178 155);
-  text-align:center;
-  padding: 0em 1em 1em 1em;
+  color: #8a8787;
+  border-radius: 0.5em;
+  background-color: #fdeaea;
+  text-align: center;
+  padding: 0em 1em 1em;
   width: 80%;
-  margin: 0 auto;
-  margin-bottom:30px;
+  margin: 0px auto 30px;
+  border: 2px solid #8a8787;
 
   }
 
@@ -610,7 +737,7 @@ padding-bottom:45px;
 
 
 .circle_title{ 
-  color:white;
+  color:#8a8787;
   margin:.5em;
 }
 
@@ -627,15 +754,15 @@ padding-bottom:45px;
 #video_section{
   width: 100%;
   height: 100%;
-  background-color: rgb(245 236 216);
+  background-color: rgb(216 222 217);
   position: relative;
+  padding-top:3rem;
 }
 
 #vid_title{
   color: gray;
   text-align: center;
   margin:0;
-  padding: .5em 0 .5em 0;
 }
 
 iframe {
@@ -680,14 +807,12 @@ iframe {
 }
 
 a.btn:hover {
-  color:white;
-  background-color:lightgrey;  
-  border:0.1em solid white;
+  background-color:pink;  
 }
 
 
 #page-top{
-  background-color: #8a8787;
+  background-color: rgba(75, 73, 73, 0.467);
   color: white;
   padding: 1em;
   display: inline-block;
@@ -696,27 +821,25 @@ a.btn:hover {
   right: 1em;
   bottom: 1em;
   cursor: pointer;
-  border:0.1em solid white;
+  /* border:0.1em solid white; */
+  transition: all .3s;
 }
 
 #page-top:hover {
-  color:#8a8787;
-  background-color: white;  
-  border: 0.1em solid #8a8787;
-
+  color:white;
+  background-color:#373737;  
 }
 
 
 
 
-@media only screen and (max-width: 700px) {
-  /* #title_img{ 
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  } */
+@media only screen and (max-width: 750px) {
   #banner_title {
-    padding: .5em;
+    width: 80%;
+    font-size: 250%;
+  }
+  #banner_section{
+    height:100%;
   }
 }
 
@@ -738,6 +861,7 @@ a.btn:hover {
     #about_content_container {
         padding-bottom: 0;
     } 
+
     .me_image{
       width:15em;
     }
@@ -754,18 +878,45 @@ a.btn:hover {
                          'music_playlist_container';
   }
   #kmusic_content1{
-    text-align:center;
+    text-align: center;
+    width: 80%;
   }
   #kmusic_content2{
     text-align:center;  
-    padding-left: 1em;
-
+    width: 80%;
+    padding-left:1em;
+    padding-right:1em;
   }
-  #music_title{
-  padding: .5em 0 0 0;
+  #audio_container{
+    padding-bottom:30px;
+    }
+  }
+@media only screen and (max-width: 500px) {
+  .player-ctn {
+      width: 375px;
   }
 }
 
+@media only screen and (max-width: 411px) {
+  .player-ctn {
+      width: 250px;
+  }
+}
+@media only screen and (max-width: 411px) {
+  #img2{
+    width:270px;
+  }
+  #img3{
+    width:270px;
+  }
+}
+
+/* Kbinge Section Reponsive */
+@media only screen and (max-width: 320px) {
+  #six-image-container {
+  padding: 0em;
+  }
+}
 /* grid-template-columns: repeat(2, 1fr);
 grid-template-rows: auto auto auto;
 grid-template-areas: 'kmusic_content_container kmusic_content_container'
@@ -788,9 +939,3 @@ grid-template-areas: 'kmusic_content_container kmusic_content_container'
   }
 }
 
-
-@media only screen and (max-width: 1190px) {
-  .sidemenu{
-  /* width: 100%; */
-  }
-}
