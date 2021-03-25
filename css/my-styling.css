@@ -629,7 +629,7 @@ a:hover{
   transition: transform 0.25s; /* Text comes up from the bottom when you hover: text is going to be pushed back up slowly when you hoveer away */
 }
 
-.image__overlay:hover { /* styling when you hover image */
+.image__overlay:hover, .image__overlay:active{ /* styling when you hover image */
   opacity: 0.85;
 }
 
@@ -833,24 +833,29 @@ a.btn:hover {
 
 
 
-@media only screen and (max-width: 750px) {
+
+@media only screen and (max-width: 1024px) {
   #banner_title {
     width: 80%;
-    font-size: 250%;
+    font-size: 225%;
   }
   #banner_section{
     height:100%;
   }
 }
 
-/* @media only screen and (max-width: 1213px) {
+@media only screen and (max-width: 500px) {
   #banner_title {
-    font-size: 100%;
-    padding: .1em;
+    font-size: 150%;
   }
-} */
+}
 
-/* Fix size of picture */
+  @media only screen and (max-width: 325px) {
+    #banner_title {
+      font-size: 125%;
+    }
+  }
+/* about responsive */
 
 @media only screen and (max-width: 1200px) {
     #about_section {
