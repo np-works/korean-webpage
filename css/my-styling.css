@@ -820,14 +820,13 @@ a.btn:hover {
   background-color: rgba(75, 73, 73, 0.467);
   color: white;
   padding: 1em;
-  display: inline-block;
+  display: none;   /* display none for when you load the page but appears as you scroll down - look at js) */
   border-radius: 100%;
   position: fixed;
   right: 1em;
   bottom: 1em;
   cursor: pointer;
   /* border:0.1em solid white; */
-  transition: all .3s;
 }
 
 #page-top:hover {

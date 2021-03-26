@@ -69,29 +69,29 @@ var listAudio = [
   {
     name:"Twice - I Can't Stop Me",
     file:"./songs/TWICE-I-CAN'T-STOP-ME.mp4",
-    duration:"03:09"
+    duration:"03:26"
   },
 
   {
     name:"Winner - Everyday",
     file:"./songs/Everyday-Winner.mp3",
-    duration:"03:09"
+    duration:"03:34"
   },
 
   {
     name:"Strong Woman Do Bong Soon Ost - Heartbeat",
     file:"./songs/Heartbeat.mp3",
-    duration:"03:09"
+    duration:"03:52"
   },
   {
     name:"Hong Jinyoung - Good Bye",
     file:"./songs/HONG-JINYOUNG-GOOD-BYE.mp4",
-    duration:"03:09"
+    duration:"03:24"
   },
   {
     name:"Exo - Call Me Baby",
     file:"./songs/EXO - Call Me Baby.mp3",
-    duration:"03:09"
+    duration:"03:31"
   },
 ]
 
@@ -336,3 +336,23 @@ function rdFunction() {
       moreText.style.display = "inline";
     }
   }
+
+  // PAGE TOP
+    // element.addEventListener(event, function, useCapture);
+    // element.addEventListener("click", function(){ alert("Hello World!"); });
+    
+    // create a variable
+    const pagetop = document.querySelector("#page-top");
+    // Attaches an function to an event on a specific element
+    window.addEventListener("scroll", scrollFunction);
+    // define the function you will use when activating the event
+    function scrollFunction() {
+      if (window.scrollY > 250) {
+        pagetop.style.display = "inline-block";
+      }
+      else {
+        pagetop.style.display = "none";
+      }
+    }
+// if the page in the window is (pageYoffset is distance from the top and compatible with all browsers, not like scrollY)
+
