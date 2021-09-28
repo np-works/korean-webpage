@@ -1,502 +1,450 @@
-
-html{ /* Not browser compatible */
-  scroll-behavior: smooth;
+html {
+	/* Not browser compatible */
+	scroll-behavior: smooth;
 }
 
 /* Opacity needs to be black when sidebar is called */
-#main_content{
-background-color: Black;
-z-index:10;
+#main_content {
+	background-color: Black;
+	z-index: 10;
 }
 
-
-h2{
-  font-variant: small-caps;
-  font-family: Raleway,sans-serif;
-  font-weight: 300;
-  color: #8a8787;
-  font-size: 55px;
+h2 {
+	font-variant: small-caps;
+	font-family: Raleway, sans-serif;
+	font-weight: 300;
+	color: #8a8787;
+	font-size: 55px;
 }
 
-h3{
-  font-variant: small-caps;
-  font-family: Raleway,sans-serif;
-  font-weight: 300;
-  color:#8a8787;
-  font-size: 40px;
+h3 {
+	font-variant: small-caps;
+	font-family: Raleway, sans-serif;
+	font-weight: 300;
+	color: #8a8787;
+	font-size: 40px;
 }
 
-h4{
-  font-family: Raleway,sans-serif;
-  font-weight: 300;
-  color:#f56196dd;
-  font-size: 15px;
+h4 {
+	font-family: Raleway, sans-serif;
+	font-weight: 300;
+	color: #f56196dd;
+	font-size: 15px;
 }
-
-
 
 p {
-  font-family: Raleway,sans-serif;
-  font-weight: 300;
-  line-height: 1.6;
+	font-family: Raleway, sans-serif;
+	font-weight: 300;
+	line-height: 1.6;
 }
 
-
-#mainbox{
-  font-size: 20px;
-  cursor: pointer;
-  transition: all .3s;
-  position: fixed;
-  top: 25px;
-  left: 20px;
-  z-index: 1;
-  color: white;
-  padding: .75rem 1rem;
-  background-color: rgba(75, 73, 73, 0.467);
-  border-radius: .5em;
- }
-
- #mainbox:hover{
-  background-color: #373737;
-  color:white;
+#mainbox {
+	font-size: 20px;
+	cursor: pointer;
+	transition: all 0.3s;
+	position: fixed;
+	top: 25px;
+	left: 20px;
+	z-index: 1;
+	color: white;
+	padding: 0.75rem 1rem;
+	background-color: rgba(75, 73, 73, 0.467);
+	border-radius: 0.5em;
 }
 
- .sidemenu{
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 0px;
-  background-color: #373737;
-  z-index: 1; /*The z-index property specifies the stack order of an element. An element with greater stack order is always in front of an element with a lower stack order. Note: z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky). */
-  padding-top: 100px;
-  overflow-x: hidden;
-  transition: all .5s;
- }
- .sidemenu a{
-  padding: 8px 8px 8px 64px;
-  text-decoration: none;
-  font-size: 20px;
-  color: white;
-  display: block;
-  font-family: Raleway,sans-serif;
-  font-weight: 300;
-  transition: all .1s;
- }
- .sidemenu a:hover{
-  color: pink;
- }
- .sidemenu .closebtn{
-  position: absolute;
-  top: 25px;
-  right: 10px;
-  font-size: 25px;
-  margin-left: 32px;
-  color: white;
-  padding: .67rem 1.1rem;
-  background-color: rgba(75, 73, 73, 0.467);
-  border-radius: 0.5em;
-  transition: all 0.3s ease 0s;
- }
- .sidemenu .closebtn:hover{
-  background-color: #373737;
- }
+#mainbox:hover {
+	background-color: #373737;
+	color: white;
+}
 
-
+.sidemenu {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 0px;
+	background-color: #373737;
+	z-index: 1; /*The z-index property specifies the stack order of an element. An element with greater stack order is always in front of an element with a lower stack order. Note: z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky). */
+	padding-top: 100px;
+	overflow-x: hidden;
+	transition: all 0.5s;
+}
+.sidemenu a {
+	padding: 8px 8px 8px 64px;
+	text-decoration: none;
+	font-size: 20px;
+	color: white;
+	display: block;
+	font-family: Raleway, sans-serif;
+	font-weight: 300;
+	transition: all 0.1s;
+}
+.sidemenu a:hover {
+	color: pink;
+}
+.sidemenu .closebtn {
+	position: absolute;
+	top: 25px;
+	right: 10px;
+	font-size: 25px;
+	margin-left: 32px;
+	color: white;
+	padding: 0.67rem 1.1rem;
+	background-color: rgba(75, 73, 73, 0.467);
+	border-radius: 0.5em;
+	transition: all 0.3s ease 0s;
+}
+.sidemenu .closebtn:hover {
+	background-color: #373737;
+}
 
 /* Title section */
 
-#banner_section{
-  position: relative;
-  height: 100vh;
-  background-color: white;
- }
-
-
-#title_img{
-  height: 100%;
-  /* grid-area: title_img; */
-  /* position: relative; */
-  display: block;
-  width:100%;
+#banner_section {
+	position: relative;
+	height: 100vh;
+	background-color: white;
 }
 
+#title_img {
+	height: 100%;
+	/* grid-area: title_img; */
+	/* position: relative; */
+	display: block;
+	width: 100%;
+}
 
 #banner_title {
-  font-size: 4rem;
-  color: #5d5d5d;
-  font-family: Raleway,sans-serif;
-  font-weight: 300;
-  text-align: center;
-  line-height: 1em;
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate( -50%, -50% );
-  text-align: center;
-  text-shadow: 1.5px 1.5px #5d5d5d57;
-  width: 40rem;
-  } 
+	font-size: 4rem;
+	color: #8a8787;
+	font-family: Raleway, sans-serif;
+	font-weight: 300;
+	text-align: center;
+	line-height: 1em;
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	text-shadow: 1.5px 1.5px #5d5d5d57;
+	width: 40rem;
+}
 
+/* About section  */
 
- /* About section  */
-
-
- #about_section{
-  background-color: rgb(253, 234, 234);
-  width: 100%;
-  height: 100%;
-  position: relative;
-  display:grid;
+#about_section {
+	background-color: rgb(253, 234, 234);
+	width: 100%;
+	height: 100%;
+	position: relative;
+	/* display:grid;
   grid-gap: 30px;
-  grid-template-columns: repeat(2, 1fr);
-  color:#8a8787;
-  padding: 3rem 0rem;
+  grid-template-columns: repeat(2, 1fr); */
+	color: #8a8787;
+	padding: 60px 60px;
 }
-  .image_container{
-    text-align: center;
-	}
-	
-  
-	.me_image{
-    width: 50%;
-    border-radius: 5px;
-    border: white double 10px;
-    cursor: pointer;
-    transition: transform 1.0s;
-	}
-	.me_image:hover{
-    transform:scale(1.1);
-		z-index: 2;
-	}
+.image_container {
+	text-align: center;
+}
 
+.me_image {
+	width: 50%;
+	border-radius: 5px;
+	border: white double 10px;
+	cursor: pointer;
+	transition: transform 1s;
+}
+.me_image:hover {
+	transform: scale(1.1);
+	z-index: 2;
+}
 
-#about_content_container{
-    width: 80%;
+#about_content_container {
+	/* width: 80%;
     margin: 0 auto;
-    text-align: center;
+    text-align: center; */
 }
-#about_title{
-  font-size: 50px;
-  margin:0px;
+#about_title {
+	font-size: 50px;
+	padding-bottom: 0.5rem;
 }
-#about_par{
-  font-size: 20px;
 
+#about_par {
+	font-size: 20px;
 }
- 
 
 /* Discovering Kpop Section */
- #discovering_section{
-  background-image: url(../images/cherry_pattern1.png);
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  background-blend-mode: lighten;
-  background-color: rgba(255,255,255,0.6);
-  position: relative;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  transition: all 0.3s ease 0s;
-
- }
-
- #dis_kpop_content_container{
-  width: 80%;
-  margin: 0 auto;
-  background-color: white;
-  text-align:center;
-  transition: all 0.3s ease 0s;
-
- }
-
- #dis_kpop_title{
-  color: #8a8787;
-  padding: 2rem 0rem 0rem 0rem;
-  margin: 0;
-  font-size: 50px;
- }
-
-
-
- .dis_kpop_par{
-  color: #8a8787;
-  font-size: 20px;
-  margin: 0px;
-  padding: 1rem 30px;
-  transition: all 0.3s ease 0s;
-
- }
-
- .more{
-   display:none;
- }
-
-
- #read-more-btn{
- display: inline-block;
- padding: 1em 1.5em;
- border: 0.1em solid #8a8787;
- margin: 2em 0em 2em 0;
- border-radius: 0.12em;
- box-sizing: border-box;
- text-decoration: none;
- font-family: 'Roboto',sans-serif;
- font-weight: 400;
- color: #8a8787;
- text-align: center;
- transition: all 0.3s ease 0s;
- cursor: pointer;
- background-color: #fee4e9;
- }
-
-
- #read-more-btn:hover {
-  background-color: pink;  
-
+#discovering_section {
+	background-image: url(../images/cherry_pattern1.png);
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-blend-mode: lighten;
+	background-color: rgba(255, 255, 255, 0.6);
+	position: relative;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	transition: all 0.3s ease 0s;
 }
 
-
-
-
- /* Music/Concerts section  */
-
-#kmusic_section{
-  width:100%;
-  height:100%; 
-  background-color:rgb(216 222 217);
-  padding-top: 3rem;
-  position: relative;
-  display:grid;
-  grid-gap: 30px;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto auto auto;
-  grid-template-areas: 'kmusic_content_container kmusic_content_container'
-                        'concert_img_container kmusic_content1'
-                        'kmusic_content2 music_playlist_container'; 
+#dis_kpop_content_container {
+	width: 80%;
+	margin: 0 auto;
+	background-color: white;
+	text-align: center;
+	transition: all 0.3s ease 0s;
 }
 
- #music_title{
-   color:#8a8787;
-   margin:0;
- }
- #con_mem_title{
-   margin:0;
- }
-
- #kmusic_content1{
-  color:#8a8787;;
-  font-size: 20px;
-  grid-area: kmusic_content1;
-  padding-left: 1em;
-  padding-right: 1em;
-
-}
-#kmusic_content2{
-  color:#8a8787;;
-  font-size: 20px;
-  grid-area: kmusic_content2;
-  padding-left: 2.5em;
-  padding-right: 1em;
+#dis_kpop_title {
+	color: #8a8787;
+	padding: 2rem 0rem 0rem 0rem;
+	margin: 0;
+	font-size: 50px;
 }
 
+.dis_kpop_par {
+	color: #8a8787;
+	font-size: 20px;
+	margin: 0px;
+	padding: 1rem 30px;
+	transition: all 0.3s ease 0s;
+}
 
-#kmusic_content_container{
-  width: 80%;
-  text-align: center;
-  margin: 0 auto;
-  grid-area: kmusic_content_container;
-  
- }
+.more {
+	display: none;
+}
+
+#read-more-btn {
+	display: inline-block;
+	padding: 1em 1.5em;
+	border: 0.1em solid #8a8787;
+	margin: 2em 0em 2em 0;
+	border-radius: 0.12em;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	color: #8a8787;
+	text-align: center;
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	background-color: #fee4e9;
+}
+
+#read-more-btn:hover {
+	background-color: pink;
+}
+
+/* Music/Concerts section  */
+
+#kmusic_section {
+	width: 100%;
+	height: 100%;
+	background-color: rgb(216 222 217);
+	padding: 60px 40px;
+}
+
+#music_title {
+	color: #8a8787;
+	padding-bottom: 1rem;
+	text-align: center;
+}
+#con_mem_title {
+}
+
+#kmusic_content1 {
+	color: #8a8787;
+	font-size: 20px;
+}
+#kmusic_content2 {
+	color: #8a8787;
+	font-size: 20px;
+}
+
+#kmusic_content_container {
+}
 
 /* Concert images */
 
- #concert_img_container{
-    display: inline-block;
-    text-align: center;
-    grid-area: concert_img_container;
+#concert_img_container {
+	display: inline-block;
+	text-align: center;
 }
 
- .concert_img {
-    border-radius: 1em;
-    transition: transform 0.5s ease 0s;
-    display: inline-block;
-    cursor: pointer;
+.concert_img {
+	border-radius: 1em;
+	transition: transform 0.5s ease 0s;
+	display: inline-block;
+	cursor: pointer;
 }
 
-.concert_img:hover{
-  transform:scale(1.1);
+.concert_img:hover {
+	transform: scale(1.1);
 }
 
-#img1{
-  width: 175px;
-  height: 30%;
+#img1 {
+	width: 175px;
+	height: 30%;
 }
-#img2{
-  width: 300px;
-  height: 50%;
-}
-
-#img3{
-  width: 315px;
-  height: 20%;
-}
-#img4{
-  width: 205px;
-  height: 50%;
+#img2 {
+	width: 300px;
+	height: 50%;
 }
 
-#caption_box{
-  background-color: #fee4e9;
-  padding: .5em .5em;
-  border: .2em solid #fee4e9;
-  border-radius: 5em;
-  box-sizing: border-box;
-  font-family: Raleway,sans-serif;
-  font-weight: 500;
-  text-align: center;
-  color: #8a8787;
-  margin: 0 auto;
-  margin-top: 1em;
-  width: 25%;
+#img3 {
+	width: 315px;
+	height: 20%;
+}
+#img4 {
+	width: 205px;
+	height: 50%;
 }
 
-
-
-#music_playlist_container{
-  text-align: center;
-  grid-area: music_playlist_container;
-  padding-bottom:20px;
+#caption_box {
+	background-color: #fee4e9;
+	padding: 0.5em 0.5em;
+	border: 0.2em solid #fee4e9;
+	border-radius: 5em;
+	box-sizing: border-box;
+	font-family: Raleway, sans-serif;
+	font-weight: 500;
+	text-align: center;
+	color: #8a8787;
+	margin: 0 auto;
+	margin-top: 1em;
+	width: 25%;
 }
 
-
+#music_playlist_container {
+	text-align: center;
+}
 
 /* Music Playlist Styling*/
 
-#audio_container{
-  /* background-color: gray; */
-  color: pink;
-  font-family: 'Roboto', sans-serif;
-  padding-bottom:30px;
+#audio_container {
+	/* background-color: gray; */
+	color: pink;
+	font-family: "Roboto", sans-serif;
+	padding-bottom: 30px;
 }
 
 #myProgress {
-  width: 420px;
-   background-color: #d9d9f2; 
-  cursor: pointer;
-  border-radius: 10px;
+	width: 420px;
+	background-color: #d9d9f2;
+	cursor: pointer;
+	border-radius: 10px;
 }
 
 #myBar {
-  width: 0%;
-  height: 5px;
-  background-color: #ffc266;
-  border-radius: 10px;
+	width: 0%;
+	height: 5px;
+	background-color: #ffc266;
+	border-radius: 10px;
 }
 
 .logo {
-  fill: red;
+	fill: red;
 }
 
-.btn-action{
-  cursor: pointer;
-  padding-top: 10px;
-  width: 30px;
+.btn-action {
+	cursor: pointer;
+	padding-top: 10px;
+	width: 30px;
 }
 
-.btn-ctn, .infos-ctn{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.btn-ctn,
+.infos-ctn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-.infos-ctn{
-padding-top: 20px;
+.infos-ctn {
+	padding-top: 20px;
 }
 
 .btn-ctn > div {
- padding: 5px;
- margin-top: 18px;
- margin-bottom: 18px;
+	padding: 5px;
+	margin-top: 18px;
+	margin-bottom: 18px;
 }
 
 .infos-ctn > div {
- margin-bottom: 8px;
- color: pink;
+	margin-bottom: 8px;
+	color: pink;
 }
 
-.first-btn{
-  margin-left: 3px;
+.first-btn {
+	margin-left: 3px;
 }
 
-.duration{
-  margin-left: 10px;
+.duration {
+	margin-left: 10px;
 }
 
-.title{
-  margin-left: 10px;
-  width: 210px;
-  text-align: center;
+.title {
+	margin-left: 10px;
+	width: 210px;
+	text-align: center;
 }
 
-.player-ctn{
-  border-radius: 15px;
-  width: 420px;
-  padding: 10px;
-  background-color: #373737;
-  margin:auto;
-  /* margin-top: 100px; */
+.player-ctn {
+	border-radius: 15px;
+	width: 420px;
+	padding: 10px;
+	background-color: #373737;
+	margin: auto;
+	/* margin-top: 100px; */
 }
 
-.playlist-track-ctn{
-  display: flex;
-  background-color: #464646;
-  margin-top: 3px;
-  border-radius: 5px;
-  cursor: pointer;
+.playlist-track-ctn {
+	display: flex;
+	background-color: #464646;
+	margin-top: 3px;
+	border-radius: 5px;
+	cursor: pointer;
 }
 
-
-.playlist-track-ctn > div{
-  margin:10px;
+.playlist-track-ctn > div {
+	margin: 10px;
 }
-.playlist-info-track{
-  width: 80%;
+.playlist-info-track {
+	width: 80%;
 }
-.playlist-info-track,.playlist-duration{
-  padding-top: 7px;
-  padding-bottom: 7px;
-  color: white;
-  font-size: 14px;
-  pointer-events: none;
+.playlist-info-track,
+.playlist-duration {
+	padding-top: 7px;
+	padding-bottom: 7px;
+	color: white;
+	font-size: 14px;
+	pointer-events: none;
 }
-.playlist-ctn{
-   padding-bottom: 20px;
+.playlist-ctn {
+	padding-bottom: 20px;
 }
-.active-track{
-  background: #4d4d4d;
-  color: pink !important;
-  font-weight: bold;
-  
-}
-
-.active-track > .playlist-info-track,.active-track >.playlist-duration,.active-track > .playlist-btn-play{
-  color: pink !important;
+.active-track {
+	background: #4d4d4d;
+	color: pink !important;
+	font-weight: bold;
 }
 
+.active-track > .playlist-info-track,
+.active-track > .playlist-duration,
+.active-track > .playlist-btn-play {
+	color: pink !important;
+}
 
-.playlist-btn-play{
-  pointer-events: none;
-  padding-top: 5px;
-  padding-bottom: 5px;
+.playlist-btn-play {
+	pointer-events: none;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 /* .fas{
   color: #ffc266;
   font-size: 20px;
 } */
 
-
-#audio_title{
-  margin:0;
+#audio_title {
+	margin: 0;
 }
 /*
 audio{
@@ -548,382 +496,350 @@ a:hover{
   border-bottom:none;
 } */
 
-
-
-
-
-
 /* Kdrama Binge section */
 
-#kbinge_section{
-  width: 100%;
-  height: 100%;
-  background-color: rgb(253, 234, 234);
-  text-align: center;
-  position: relative;
-  padding-top:3rem;
+#kbinge_section {
+	width: 100%;
+	height: 100%;
+	background-color: rgb(253, 234, 234);
+	text-align: center;
+	position: relative;
+	padding-top: 3rem;
 }
 
-#kbinge_title{
-  margin:0;
+#kbinge_title {
+	margin: 0;
 }
-
 
 /* image overlay */
 #kbinge_content_container {
-  width: 80%;
-  margin:0;
-  padding: .5em 0 .5em 0;  
-  margin: 0 auto;
+	width: 80%;
+	margin: 0;
+	padding: 0.5em 0 0.5em 0;
+	margin: 0 auto;
 }
 
-#kdrama_par{
-  font-size: 20px;
-  color: #8a8787;
+#kdrama_par {
+	font-size: 20px;
+	color: #8a8787;
 }
 
-
-#six-image-container{
-  padding: 0em 1em 2em 1em;
-  display: grid;
-  grid-gap: 1.5em;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+#six-image-container {
+	padding: 0em 1em 2em 1em;
+	display: grid;
+	grid-gap: 1.5em;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.image { /* positions overlay 100% w and h over image*/
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
+.image {
+	/* positions overlay 100% w and h over image*/
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
 }
 
-.image__img { /* image itself */
-  display: block;
-  width: 100%;
-  height: 100%;
-  border-radius: 1em;
+.image__img {
+	/* image itself */
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: 1em;
 }
 
-.image__overlay { /* the container with overlay and image */
-  position: absolute; /* works with position; relative above */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  color: #ffffff;
-  font-family: Raleway,sans-serif;
-  display: flex; /*allows to vert and hor center the text */
-  flex-direction: column; /* text appears on top of each other */
-  align-items: center; /*allows to vert and hor center the text */
-  justify-content: center; /*allows to vert and hor center the text */
-  opacity: 0; /* makes opacity of intial overlay 0 */
-  transition: opacity 0.25s;
-  border-radius: 1em;
-
+.image__overlay {
+	/* the container with overlay and image */
+	position: absolute; /* works with position; relative above */
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	color: #ffffff;
+	font-family: Raleway, sans-serif;
+	display: flex; /*allows to vert and hor center the text */
+	flex-direction: column; /* text appears on top of each other */
+	align-items: center; /*allows to vert and hor center the text */
+	justify-content: center; /*allows to vert and hor center the text */
+	opacity: 0; /* makes opacity of intial overlay 0 */
+	transition: opacity 0.25s;
+	border-radius: 1em;
 }
 
-.image__overlay--blur { /* to blur images in background when you hover over the image */
-  backdrop-filter: blur(5px);
+.image__overlay--blur {
+	/* to blur images in background when you hover over the image */
+	backdrop-filter: blur(5px);
 }
 
-
-.image__overlay > * { /* says target every direct child of the image overlay containter which is the title and para */
-  transform: translateY(20px); /* Text comes up from the bottom when you hover:text is going to be pushed down 20px from the original position */
-  transition: transform 0.25s; /* Text comes up from the bottom when you hover: text is going to be pushed back up slowly when you hoveer away */
+.image__overlay > * {
+	/* says target every direct child of the image overlay containter which is the title and para */
+	transform: translateY(
+		20px
+	); /* Text comes up from the bottom when you hover:text is going to be pushed down 20px from the original position */
+	transition: transform 0.25s; /* Text comes up from the bottom when you hover: text is going to be pushed back up slowly when you hoveer away */
 }
 
-.image__overlay:hover{ /* styling when you hover image */
-  opacity: 0.85;
+.image__overlay:hover {
+	/* styling when you hover image */
+	opacity: 0.85;
 }
 
-.image__overlay:hover > * { /* agaain target child elements */
-  transform: translateY(0); /* Text comes up from the bottom when you hover - text is going to be pushed back up  when you hoveer away */
+.image__overlay:hover > * {
+	/* agaain target child elements */
+	transform: translateY(
+		0
+	); /* Text comes up from the bottom when you hover - text is going to be pushed back up  when you hoveer away */
 }
 
-.image__title { /* only styling for the title */
-  font-size: 1.5em;
-  font-weight: 500;
-  margin-bottom: 10px;
+.image__title {
+	/* only styling for the title */
+	font-size: 1.5em;
+	font-weight: 500;
+	margin-bottom: 10px;
 }
-.image__title_2 { /* different font size for the title of strong woman drama */
-  font-size: 1.4em;
-  font-weight: 500;
-  margin-bottom: 10px;
+.image__title_2 {
+	/* different font size for the title of strong woman drama */
+	font-size: 1.4em;
+	font-weight: 500;
+	margin-bottom: 10px;
 }
 
-.image__description { /* only styling for the image description */
-  font-size: 0.90em;
-  margin-top: 0.25em;
-  text-align: center;
-  margin-left:20px;
-  margin-right: 20px;
-  margin-bottom: 1em;
+.image__description {
+	/* only styling for the image description */
+	font-size: 0.9em;
+	margin-top: 0.25em;
+	text-align: center;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 1em;
 }
 
 .kdrama-image-link {
-  color: pink;
-  text-decoration: none;
-  font-size: 1.25em;
+	color: pink;
+	text-decoration: none;
+	font-size: 1.25em;
 }
 
+/* My Dancing Career Section  */
 
-
-
-
-
- /* My Dancing Career Section  */
-
- #dancing_section{
-    background-image: url(../images/cherry_pattern1.png);
-    background-position: center;
-    background-blend-mode: lighten;
-    background-color: rgba(255,255,255,0.6);
-    padding-top:3rem;
-    position: relative;
-    display: grid;
-    grid-gap: 30px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
-    grid-template-areas:
-        'kpopdancing_title kpopdancing_title kpopdancing_title'
-        'first-box second-box third-box';
- }
-
- /* grid-template-columns: repeat(auto-fit, minmax(365px, 1fr)); */
-
-
- #kpopdancing_title{
-   color:#8a8787;
-   text-align:center;
-   grid-area:kpopdancing_title;
-   margin:0;
- }
-  /* No margin side by side boxes */
-
-.box-text{
-  font-family: Raleway,sans-serif;
-  line-height: 1.5;
-  
+#dancing_section {
+	background-image: url(../images/cherry_pattern1.png);
+	background-position: center;
+	background-blend-mode: lighten;
+	background-color: rgba(255, 255, 255, 0.6);
+	padding-top: 3rem;
+	position: relative;
+	display: grid;
+	grid-gap: 30px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto auto;
+	grid-template-areas:
+		"kpopdancing_title kpopdancing_title kpopdancing_title"
+		"first-box second-box third-box";
 }
 
-#three-boxes-container{
-max-width: 100%;
-margin:0 auto;
-text-align:center;
-padding-bottom:45px;
+/* grid-template-columns: repeat(auto-fit, minmax(365px, 1fr)); */
 
+#kpopdancing_title {
+	color: #8a8787;
+	text-align: center;
+	grid-area: kpopdancing_title;
+	margin: 0;
+}
+/* No margin side by side boxes */
+
+.box-text {
+	font-family: Raleway, sans-serif;
+	line-height: 1.5;
 }
 
-.no-margin-3-boxes{
-  color: #8a8787;
-  border-radius: 0.5em;
-  background-color: #fdeaea;
-  text-align: center;
-  padding: 0em 1em 1em;
-  width: 80%;
-  margin: 0px auto 30px;
-  border: 2px solid #8a8787;
-
-  }
-
-
-#first-box{
-  grid-area:first-box;
-}
-#second-box{
-  grid-area:second-box;
-}
-#third-box{
-  grid-area:third-box;
+#three-boxes-container {
+	max-width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 45px;
 }
 
-
-
-.circle_title{ 
-  color:#8a8787;
-  margin:.5em;
+.no-margin-3-boxes {
+	color: #8a8787;
+	border-radius: 0.5em;
+	background-color: #fdeaea;
+	text-align: center;
+	padding: 0em 1em 1em;
+	width: 80%;
+	margin: 0px auto 30px;
+	border: 2px solid #8a8787;
 }
 
-.box_content{
-  font-family: Raleway,sans-serif;
-  font-size: 1em;
-  line-height: 1.5;  
+#first-box {
+	grid-area: first-box;
+}
+#second-box {
+	grid-area: second-box;
+}
+#third-box {
+	grid-area: third-box;
 }
 
+.circle_title {
+	color: #8a8787;
+	/* margin: 0.5em; */
+	padding-top: 1em;
+	margin: 0;
+}
 
+.journey-icon {
+	padding: 1rem;
+}
+
+.box_content {
+	font-family: Raleway, sans-serif;
+	font-size: 1em;
+	line-height: 1.5;
+}
 
 /* Video section */
 
-#video_section{
-  width: 100%;
-  height: 100%;
-  background-color: rgb(216 222 217);
-  position: relative;
-  padding-top:3rem;
+#video_section {
+	width: 100%;
+	height: 100%;
+	background-color: rgb(216 222 217);
+	position: relative;
+	padding-top: 3rem;
 }
 
-#vid_title{
-  color: gray;
-  text-align: center;
-  margin:0;
+#vid_title {
+	color: gray;
+	text-align: center;
+	margin: 0;
 }
 
 iframe {
-    position: relative;
-    margin: 0 auto;
-    width: 40%;
-    height: 300px;
-    display: block;
-} 
-
-#vid_par{
-  padding: 0px 45px 30px 45px;
+	position: relative;
+	margin: 0 auto;
+	width: 40%;
+	height: 300px;
+	display: block;
 }
 
-
-
-#video_content_container{
-  text-align: center;
-  color: gray;
-  padding-bottom:30px;
-
-} 
-
-#btn_container{
-  margin: 0 auto;
+#vid_par {
+	padding: 0px 45px 30px 45px;
 }
 
-.btn{
-  display:inline-block;
-  padding:1em 1.5em;
-  border:0.1em solid #8a8787;
-  margin:0 0.3em 0.3em 0;
-  border-radius:0.12em;
-  box-sizing: border-box;
-  text-decoration:none;
-  font-family:'Roboto',sans-serif;
-  font-weight:300;
-  color:#8a8787;
-  text-align:center;
-  transition: all 0.2s;
-  background-color: #fee4e9;
+#video_content_container {
+	text-align: center;
+	color: gray;
+	padding-bottom: 30px;
+}
+
+#btn_container {
+	margin: 0 auto;
+}
+
+.btn {
+	display: inline-block;
+	padding: 1em 1.5em;
+	border: 0.1em solid #8a8787;
+	margin: 0 0.3em 0.3em 0;
+	border-radius: 0.12em;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	color: #8a8787;
+	text-align: center;
+	transition: all 0.2s;
+	background-color: #fee4e9;
 }
 
 a.btn:hover {
-  background-color:pink;  
+	background-color: pink;
 }
 
-
-#page-top{
-  background-color: rgba(75, 73, 73, 0.467);
-  color: white;
-  padding: 1em;
-  display: none;   /* display none for when you load the page but appears as you scroll down - look at js) */
-  border-radius: 100%;
-  position: fixed;
-  right: 1em;
-  bottom: 1em;
-  cursor: pointer;
-  /* border:0.1em solid white; */
+#page-top {
+	background-color: rgba(75, 73, 73, 0.467);
+	color: white;
+	padding: 1em;
+	display: none; /* display none for when you load the page but appears as you scroll down - look at js) */
+	border-radius: 100%;
+	position: fixed;
+	right: 1em;
+	bottom: 1em;
+	cursor: pointer;
+	/* border:0.1em solid white; */
 }
 
 #page-top:hover {
-  color:white;
-  background-color:#373737;  
+	color: white;
+	background-color: #373737;
 }
 
-
-
-
-
 @media only screen and (max-width: 1024px) {
-  #banner_title {
-    width: 80%;
-    font-size: 225%;
-  }
-  #banner_section{
-    height:100%;
-  }
+	#banner_title {
+		width: 80%;
+		font-size: 225%;
+	}
+	#banner_section {
+		height: 100%;
+	}
 }
 
 @media only screen and (max-width: 500px) {
-  #banner_title {
-    font-size: 150%;
-  }
+	#banner_title {
+		font-size: 150%;
+	}
 }
 
-  @media only screen and (max-width: 325px) {
-    #banner_title {
-      font-size: 125%;
-    }
-  }
+@media only screen and (max-width: 325px) {
+	#banner_title {
+		font-size: 125%;
+	}
+}
 /* about responsive */
 
-@media only screen and (max-width: 1200px) {
-    #about_section {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto;
-      grid-gap: 0;
-    }
-    #about_content_container {
-        padding-bottom: 0;
-    } 
-
-    .me_image{
-      width:15em;
-    }
+@media only screen and (max-width: 768px) {
+	#about_title {
+		text-align: center;
+	}
 }
 
 @media only screen and (max-width: 1020px) {
-  #kmusic_section{
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat (5, auto);
-    grid-template-areas: 'kmusic_content_container'
-                         'kmusic_content1'
-                         'concert_img_container'
-                         'kmusic_content2'
-                         'music_playlist_container';
-  }
-  #kmusic_content1{
-    text-align: center;
-    width: 80%;
-  }
-  #kmusic_content2{
-    text-align:center;  
-    width: 80%;
-    padding-left:1em;
-    padding-right:1em;
-  }
-  #audio_container{
-    padding-bottom:30px;
-    }
-  }
+	#kmusic_section {
+	}
+	#kmusic_content1 {
+		text-align: center;
+	}
+	#kmusic_content2 {
+		text-align: center;
+	}
+	#audio_container {
+	}
+}
 @media only screen and (max-width: 500px) {
-  .player-ctn {
-      width: 375px;
-  }
+	.player-ctn {
+		width: 375px;
+	}
 }
 
 @media only screen and (max-width: 411px) {
-  .player-ctn {
-      width: 250px;
-  }
+	.player-ctn {
+		width: 250px;
+	}
 }
 @media only screen and (max-width: 411px) {
-  #img2{
-    width:270px;
-  }
-  #img3{
-    width:270px;
-  }
+	#img2 {
+		width: 270px;
+	}
+	#img3 {
+		width: 270px;
+	}
 }
 
 /* Kbinge Section Reponsive */
 @media only screen and (max-width: 320px) {
-  #six-image-container {
-  padding: 0em;
-  }
+	#six-image-container {
+		padding: 0em;
+	}
 }
 /* grid-template-columns: repeat(2, 1fr);
 grid-template-rows: auto auto auto;
@@ -933,17 +849,16 @@ grid-template-areas: 'kmusic_content_container kmusic_content_container'
 } */
 
 @media only screen and (max-width: 1190px) {
-  #dancing_section{
-    grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto;
-  grid-template-areas:
-      'kpopdancing_title'
-      'first-box'
-      'second-box'
-      'third-box';
-  }
-  #third-box{
-    margin-bottom:30px;
-  }
+	#dancing_section {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto;
+		grid-template-areas:
+			"kpopdancing_title"
+			"first-box"
+			"second-box"
+			"third-box";
+	}
+	#third-box {
+		margin-bottom: 30px;
+	}
 }
-
